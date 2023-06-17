@@ -19,6 +19,7 @@ export default function RootLayout({
      lang='en'
      className={cn('bg-background text-white ', inter.className)}>
       <body className='min-h-screen pt-12 text-white antialiased'>
+        {/* @ts-expect-error Server Component */}
        <Navbar/>
       <div className='container max-w-7xl mx-auto h-full pt-12'>
             {children}
