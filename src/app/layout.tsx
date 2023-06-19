@@ -2,6 +2,8 @@ import { cn } from '@/lib/utils'
 import '@/styles/globals.css'
 import {Inter} from 'next/font/google'
 import Navbar from '@/components/Navbar'
+import Providers from '@/components/Providers'
+
 import { Toaster } from '@/components/ui/Toaster'
 export const metadata = {
   title: 'POTENTIA',
@@ -21,13 +23,15 @@ export default function RootLayout({
      lang='en'
      className={cn('bg-background text-white ', inter.className)}>
       <body className='min-h-screen pt-12 text-white antialiased'>
+        <Providers>
         {/* @ts-expect-error Server Component */}
        <Navbar/>
        {authModal}
       <div className='container max-w-7xl mx-auto h-full pt-12'>
             {children}
           </div>
-          <Toaster/>
+          <Toaster/>  
+          </Providers>
       </body>
     </html>
   )
