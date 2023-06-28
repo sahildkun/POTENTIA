@@ -2,7 +2,7 @@
 import { getAuthSession } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { notFound } from 'next/navigation';
-import PostFeed from '@/components/PostFeed';
+
 import Post from '@/components/Post';
 import React from 'react'
 import MiniCreatePost from '@/components/MiniCreatePost';
