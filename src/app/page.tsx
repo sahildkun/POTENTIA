@@ -21,7 +21,7 @@ export default async  function  Home() {
         subreddits.map((sub) => { 
        return  (
        <div className="flex flex-col" key={sub.id}>
-          <Link href={`/w/${sub.name}`} className="hover:text-blue-300">{sub.name}</Link>
+          <Link href={`/w/${sub.name}`} className="hover:text-blue-300">w/{sub.name}</Link>
         </div>)
         }
         )

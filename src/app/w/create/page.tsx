@@ -38,7 +38,7 @@ const CreatePage = () => {
             })
           }
   
-          if (err.response?.status === 422) {
+          if (err.response?.status === 400) {
             return toast({
               title: 'Invalid subreddit name.',
               description: 'Please choose a name between 3 and 21 letters.',
